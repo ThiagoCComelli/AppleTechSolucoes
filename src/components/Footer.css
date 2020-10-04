@@ -1,0 +1,31 @@
+.footer{
+    background-color: #141414;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    height: 30vh;
+    padding: 0 10% 0 10%;
+}
+
+.footer-center{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-center img, .footer-center a {
+    height: 80%;
+}
+
+.footer-end{
+    color: #fff;
+    background-color: #0f0f0f;
+    font-size: 80%;
+    padding: 3px;
+    width: 100vw;
+    min-height: 20px;
+    text-align: center;
+}

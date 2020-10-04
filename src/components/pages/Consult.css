@@ -1,0 +1,9 @@
+.consultMain {
+    width: 100vw;
+    min-height: calc(100vh - 320px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}

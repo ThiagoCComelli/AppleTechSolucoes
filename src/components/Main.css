@@ -1,0 +1,27 @@
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100vw;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+.myVideo {
+    min-height: 100%;
+    opacity: 0.4;
+}
+
+.hero-text{
+    font-size: calc(1vh + 1vw);
+    color: #fff;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text > p {
+    font-size: calc(0.8vh + 0.8vw)
+}

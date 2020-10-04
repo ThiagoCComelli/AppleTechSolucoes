@@ -1,0 +1,23 @@
+.profileMain{
+    width: 100vw;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.profileBox{
+    width: 400px;
+    min-width: 200px;
+    height: 40%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+}
+
+.profileTitle{
+    width: 100%;
+}

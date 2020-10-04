@@ -1,0 +1,86 @@
+.mainConsultCard{
+    width: 70vw;
+    max-width: 700px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.consultTitle{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.consultDesc{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.consultContainerDouble{
+    width: 100%;
+    display: flex;
+}
+
+.consultContainerDoubleItem{
+    width: 50%;
+    margin-top: 10px;
+    margin: 10px;
+}
+
+.consultContainerDoubleItem input{
+    display: block;
+    width: 100%;
+    height: 30px;
+    border-style: none;
+    border-bottom: solid black 1px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.consultContainer{
+    width: 100%;
+    padding: 10px;
+}
+
+.consultContainer textarea{
+    width: 100%;
+    border-style: none;
+    border-bottom: solid black 1px;
+    padding-left: 10px;
+    margin: 10px 0 10px 0;
+    resize: vertical;
+    color: rgba(0, 0, 0, 0.562);
+    user-select: auto;
+}
+
+@media (max-width: 600px){
+    .consultContainerDouble{
+        display: block;
+    }
+
+    .consultContainerDoubleItem {
+        width: 95%;
+    }
+
+    .mainConsultCard{
+        width: 90vw;
+    }
+}
+
+@media (min-width: 601px){
+    .consultContainerDoubleItem {
+        width: 50%;
+    }
+
+    .mainConsultCard{
+        width: 70vw;
+    }
+}
