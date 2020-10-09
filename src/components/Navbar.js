@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useHistory } from 'react-router-dom'
+import { notification } from '../utils/middlewareNotifications'
 import UserContext from '../context/UserContext'
 
 import './Navbar.css'
@@ -7,6 +8,7 @@ import './Navbar.css'
 
 
 function Navbar(){
+    const history = useHistory()
     const {userData,setUserData} = useContext(UserContext)
     const [menuNav,setMenuNav] = useState({
         open: false
@@ -17,7 +19,11 @@ function Navbar(){
             token: undefined,
             user: false
         })
+
+        notification({title:"Logout com sucesso!.",message:"Até a próxima, esperamos que sua experiência tenha sido boa.",type:"success"})
         localStorage.setItem('auth-token','')
+
+        history.push("/")
     }
 
     const Menu = ({menuNav,setMenuNav}) => {

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { register, login } from '../../utils/auth-api'
+import { notification } from '../../utils/middlewareNotifications'
 import UseContext from '../../context/UserContext'
 import './Login.css'
 
@@ -16,6 +17,7 @@ function Register(){
     const handleSignin = async (e) => {
         e.preventDefault()
         if(infos.password !== infos.passwordAgain){
+            notification({title:"Falha na criação!",message:"As senhas fornecidas não são iguais.",type:"danger"})
             return
         }
         const regisRes = await register(infos)
@@ -25,8 +27,11 @@ function Register(){
                 token: loginRes.data.token,
                 user: loginRes.data.user
             })
+
+            notification({title:"Conta criada com sucesso!",message:"Seja bem-vindo ao AppleTech Soluções.",type:"success"})
             localStorage.setItem('auth-token',loginRes.data.token)
         } else {
+            notification({title:"Falha para criar na conta!",message:"Problema interno no banco de dados, tente novamente mais tarde.",type:"danger"})
             return
         }
     }

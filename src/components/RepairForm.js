@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react'
 import {useHistory} from 'react-router-dom'
 import UserContext from '../context/UserContext'
 import { saveCallService } from '../utils/auth-api'
+import { notification } from '../utils/middlewareNotifications'
 import './RepairForm.css'
 
 export default function RepairForm(){
@@ -26,8 +27,12 @@ export default function RepairForm(){
         const res = await saveCallService(infos)
 
         if(res.data){
+            notification({title:"Chamada registrada com sucesso!.",message:"Sua chamada foi registrada e sera analisada em breve.",type:"success"})
             history.push('/')
+        }else{
+            notification({title:"Falha na hora de registrar!",message:"Houve um problema na hora de tentar registrar sua chamada, tente novamente mais tarde.",type:"danger"})
         }
+
     }
 
     return(

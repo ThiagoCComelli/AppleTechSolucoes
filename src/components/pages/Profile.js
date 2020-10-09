@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import UserContext from '../../context/UserContext'
 import {useHistory} from 'react-router-dom'
 import { changeDataProfile, check, checkUser } from '../../utils/auth-api'
+import { notification } from '../../utils/middlewareNotifications'
 import './Profile.css'
 import '../RepairForm.css'
 
@@ -17,15 +18,6 @@ export default function Profile(){
         _id: userData.user._id
     })
 
-    // const logout = () => {
-    //     setUserData({
-    //         token: undefined,
-    //         user: false
-    //     })
-    //     localStorage.setItem('auth-token','')
-    //     history.push('/')
-    // }
-
     const handleChanges = async (e) => {
         e.preventDefault()
         
@@ -40,8 +32,10 @@ export default function Profile(){
                     token: token,
                     user: userRes.data
                 })
+                notification({title:"Mudanças efetuadas com sucesso!",message:"As mudanças ja foram registradas no banco de dados, e estão validas.",type:"success"})
                 history.push('/')
             } else {
+                notification({title:"Falha para efetuar as mudanças na conta!",message:"Problema interno no banco de dados, tente novamente mais tarde.",type:"danger"})
                 setUserData({user: false})
             }
         }

@@ -2,6 +2,10 @@
 import React, { useState, useEffect } from 'react'
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { check, checkUser } from './utils/auth-api'
+
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
+
 import Home from './components/pages/Home'
 import Services from './components/pages/Services'
 import Repair from './components/pages/Repair'
@@ -47,6 +51,8 @@ function App() {
         checkLoggedIn()
     }, [])
 
+    
+
     if(userData.user === undefined) return <div className="loadingDiv"><h1>Loading...</h1></div>
 
     return (
@@ -55,6 +61,7 @@ function App() {
             <UserContext.Provider value={{userData,setUserData}}>
             <ScrollToTop>
                 <Navbar />
+                <ReactNotification />
                 <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/services" exact component={Services} />
