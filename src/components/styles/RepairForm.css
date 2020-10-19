@@ -2,17 +2,34 @@
     display: block;
     width: 70vw;
     max-width: 1000px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
     border: solid black 1px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 .contentsRepair{
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    align-items: center;
+    flex-direction: column;
+}
+
+.contentsRepair > button{
+    width: 70vw;
+    margin-bottom: 150px;
+    border-style: none;
+    height: 30px;
+    background-color: #fff;
+    border: black solid 1px;
+    cursor: pointer;
+    transition: background-color linear 0.3s, color linear 0.3s;
+}
+
+.contentsRepair > button:hover{
+    background-color: rgba(255, 0, 0, 0.781);
+    color: white;
 }
 
 .boxFormRepair{
@@ -24,8 +41,9 @@
     width: 100%;
     height: 30px;
     background-color: #fff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border: black solid 1px;
+    cursor: pointer;
 }
 
 .boxFormRepair button:hover{

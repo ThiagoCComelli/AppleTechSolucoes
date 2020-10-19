@@ -21,7 +21,7 @@ const checkUser = async (token) => {
 }
 
 const deleteUser = async (user) => {
-    const result = await axios.delete('https://reactjsthiagoapi.herokuapp.com/delete', user._id)
+    const result = await axios.delete('https://reactjsthiagoapi.herokuapp.com/delete', {headers:{"x-auth-token":user.token,user:user.id}})
     return result
 }
 
@@ -40,4 +40,9 @@ const getCallService = async (user) => {
     return result
 }
 
-export {login,register,check,checkUser,deleteUser,changeDataProfile,saveCallService,getCallService}
+const deleteCall = async (call) => {
+    const result = await axios.delete('https://reactjsthiagoapi.herokuapp.com/deleteCall', {headers:{"x-auth-token":call.token,call:call.id}})
+    return result
+}
+
+export {login,register,check,checkUser,deleteUser,changeDataProfile,saveCallService,getCallService,deleteCall}

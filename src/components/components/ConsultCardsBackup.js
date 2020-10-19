@@ -1,5 +1,5 @@
 import React from 'react'
-import './ConsultCard.css'
+import '../styles/ConsultCard.css'
 
 export default function ConsultCard(props){
     

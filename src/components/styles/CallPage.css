@@ -1,10 +1,17 @@
+.centerCallPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .mainConsultCard{
     width: 70vw;
     max-width: 700px;
     margin: 20px;
     padding: 20px;
     border: 1px solid black;
-    border-radius: 10px;
+    /* border-radius: 1%; */
     overflow: hidden;
     box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
     display: flex;
@@ -61,6 +68,21 @@
     user-select: auto;
 }
 
+.mainConsultCard > button{
+    width: 70vw;
+    border-style: none;
+    height: 30px;
+    background-color: #fff;
+    border: black solid 1px;
+    cursor: pointer;
+    transition: background-color linear 0.3s, color linear 0.3s;
+}
+
+.mainConsultCard > button:hover{
+    background-color: rgba(255, 0, 0, 0.781);
+    color: white;
+}
+
 @media (max-width: 600px){
     .consultContainerDouble{
         display: block;
@@ -70,9 +92,11 @@
         width: 95%;
     }
 
-    .mainConsultCard{
+    .mainConsultCard, .mainConsultCard > button {
         width: 90vw;
     }
+
+
 }
 
 @media (min-width: 601px){

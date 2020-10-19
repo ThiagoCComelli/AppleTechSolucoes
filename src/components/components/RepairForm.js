@@ -1,9 +1,9 @@
 import React, {useState, useContext} from 'react'
 import {useHistory} from 'react-router-dom'
-import UserContext from '../context/UserContext'
-import { saveCallService } from '../utils/auth-api'
-import { notification } from '../utils/middlewareNotifications'
-import './RepairForm.css'
+import UserContext from '../../context/UserContext'
+import { saveCallService } from '../../utils/auth-api'
+import { notification } from '../../utils/middlewareNotifications'
+import '../styles/RepairForm.css'
 
 export default function RepairForm(){
     const { userData } = useContext(UserContext)

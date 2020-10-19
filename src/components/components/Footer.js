@@ -1,5 +1,5 @@
 import React from 'react'
-import './Footer.css'
+import '../styles/Footer.css'
 
 function Footer(){
     return (
@@ -12,7 +12,7 @@ function Footer(){
             </div>
         </div>
         <div className="footer-end">
-
+            <span>Developed by: Thiago Comelli || <a href="https://www.linkedin.com/in/thiagoccomelli/">Linkedin</a> || <a href="https://github.com/ThiagoCComelli">GitHub</a></span>
         </div>
         </>
     )

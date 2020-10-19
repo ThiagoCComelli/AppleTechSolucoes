@@ -13,11 +13,14 @@ import Consult from './components/pages/Consult'
 import Login from './components/pages/Login'
 import Register from './components/pages/Register'
 import Profile from './components/pages/Profile'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
-import UserContext from './context/UserContext'
+import CallPage from './components/pages/CallPage'
+import Contact from './components/pages/Contact'
+import Price from './components/pages/Price'
 import PrivateRoute from './components/pages/PrivateRoute'
+import Navbar from './components/components/Navbar'
+import Footer from './components/components/Footer'
+import ScrollToTop from './components/components/ScrollToTop'
+import UserContext from './context/UserContext'
 
 import './App.css'
 
@@ -65,11 +68,14 @@ function App() {
                 <Switch>
                     <Route path="/" exact component={Home} />
                     <Route path="/services" exact component={Services} />
+                    <Route path="/contact" exact component={Contact} />
+                    <Route path="/price" exact component={Price} />
                     <PrivateRoute path="/services/repair" exact component={Repair} />
                     <PrivateRoute path="/services/consult" exact component={Consult} />
                     <Route path="/login" exact component={Login} />
                     <Route path="/register" exact component={Register} />
                     <PrivateRoute path="/profile" exact component={Profile} />
+                    <PrivateRoute path="/call" exact component={CallPage} />
                 </Switch>
                 <Footer />
             </ScrollToTop>

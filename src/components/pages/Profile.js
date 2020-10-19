@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
 import UserContext from '../../context/UserContext'
 import {useHistory} from 'react-router-dom'
-import { changeDataProfile, check, checkUser } from '../../utils/auth-api'
+import { changeDataProfile, check, checkUser, deleteUser } from '../../utils/auth-api'
 import { notification } from '../../utils/middlewareNotifications'
-import './Profile.css'
-import '../RepairForm.css'
+import '../styles/Profile.css'
+import '../styles/RepairForm.css'
 
 export default function Profile(){
     const { userData, setUserData} = useContext(UserContext)
@@ -41,6 +41,17 @@ export default function Profile(){
         }
     }
 
+    const deleteCallFunc = async () => {
+        const res = await deleteUser({id:userData.user._id, token:userData.token})
+        if(res){
+            notification({title:"Conta deletada com sucesso!",message:"Operação realizada com sucesso.",type:"success"})
+            setUserData({
+                token: undefined,
+                user: false
+            })
+            history.push('/')
+        }
+    }
 
     return(
         <>
@@ -74,6 +85,7 @@ export default function Profile(){
                     <button type="submit">Confirmar mudancas</button>
                 </div>
             </form>
+            <button onClick={deleteCallFunc}>Excluir perfil</button>
         </div>
         </>
     )

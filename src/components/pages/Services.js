@@ -1,5 +1,5 @@
 import React from 'react'
-import ServiceItem from '../ServicesItem'
+import ServiceItem from '../components/ServicesItem'
 
 function Services(){
     return(

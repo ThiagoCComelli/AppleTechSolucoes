@@ -43,11 +43,12 @@
 }
 
 .products {
-    background-color: rgba(0, 0, 0, 0.959);
+    background-color:#29a5c4;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100vw;
+    height: 5px;
     padding: 2px;
 }
 

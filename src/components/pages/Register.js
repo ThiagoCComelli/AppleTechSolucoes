@@ -3,7 +3,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { register, login } from '../../utils/auth-api'
 import { notification } from '../../utils/middlewareNotifications'
 import UseContext from '../../context/UserContext'
-import './Login.css'
+import '../styles/Login.css'
 
 function Register(){
     const history = useHistory()

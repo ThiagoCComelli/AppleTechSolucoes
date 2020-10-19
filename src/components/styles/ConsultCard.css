@@ -1,0 +1,86 @@
+.mainConsultItem{
+    position: relative;
+    width: 65%;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    transition: ease-in-out 0.3s scale, ease-in-out 0.3s box-shadow, ease-in-out 0.3s border-color;
+    margin: 20px;
+}
+
+.mainConsultItem:hover{
+    scale: 1.02;
+    box-shadow: 3px 3px 0px 0px #29a5c4;
+    border-color: #29a5c4;
+}
+
+.mainConsultItem a{
+    height: 100%;
+}
+
+.mainConsultItem button{
+    height: 100%;
+    width: 100%;
+    min-width: 100px;
+    border-style: none;
+    background-color: #141414;
+    color: white;
+    cursor: pointer;
+    transition: color linear .3s;
+}
+
+.mainConsultItem button:hover{
+    color: #29a5c4;
+}
+
+.titleConsult{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "title text"
+    "id id"
+    ;
+    padding: 5px;
+    justify-content: flex-start;
+}
+
+.titleConsult strong{
+    font-size: 1.8em;
+    grid-area: title;
+}
+
+.titleConsult span{
+    bottom: 5px;
+    left: 5px;
+    color: rgba(0, 0, 0, 0.5);
+    grid-area: id;
+}
+
+.titleConsult p{
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    margin-left: 11px;
+}
+
+@media (max-width: 600px){
+    .mainConsultItem, .titleConsult {
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .mainConsultItem button, .mainConsultItem a{
+        width: 100%;
+        height: 30px;
+    }
+
+    .titleConsult p{
+        margin-left: 0px;
+    }
+}

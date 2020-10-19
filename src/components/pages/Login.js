@@ -3,12 +3,12 @@ import { Link, useHistory } from 'react-router-dom'
 import UseContext from '../../context/UserContext'
 import { notification } from '../../utils/middlewareNotifications'
 import { login } from '../../utils/auth-api'
-import './Login.css'
+import '../styles/Login.css'
 
 
-function Login(props){
+function Login(){
     const history = useHistory()
-    const {userData, setUserData} = useContext(UseContext)
+    const {setUserData} = useContext(UseContext)
     const [infos,changeInfos] = useState({
         email: "",
         password: ""
@@ -18,7 +18,7 @@ function Login(props){
         e.preventDefault()
         const loginRes = await login(infos)
         if(!loginRes.data.auth){
-            notification({title:"Falha para entrar na conta.",message:"Usuário nao encontrado ou credenciais erradas",type:"danger"})
+            notification({title:"Falha para entrar na conta!",message:"Usuário nao encontrado ou credenciais erradas.",type:"danger"})
             return
         }
         setUserData({
@@ -26,12 +26,10 @@ function Login(props){
             user: loginRes.data.user
         })
         localStorage.setItem('auth-token',loginRes.data.token)
-    }
 
-    if(userData.user){
-        history.push('/')
         notification({message:"Login efetuado com sucesso.",title:"Bem vindo ao AppleTech Solucoes!",type:"success"})
-    } 
+        history.push('/')
+    }
 
     return(
         <>

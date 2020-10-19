@@ -1,8 +1,8 @@
 import React, { useEffect, useContext, useState } from 'react'
-import ConsultCard from '../ConsultCard'
+import ConsultCard from '../components/ConsultCard'
 import UseContext from '../../context/UserContext'
 import { getCallService } from '../../utils/auth-api'
-import './Consult.css'
+import '../styles/Consult.css'
 
 function Repair(){
     const {userData} = useContext(UseContext)
@@ -31,8 +31,7 @@ function Repair(){
             {callsState.map((element) => {
                 return <ConsultCard key={element._id} props={element} />
             })}
-        </div>
-        
+        </div>        
         </>
     )
 }

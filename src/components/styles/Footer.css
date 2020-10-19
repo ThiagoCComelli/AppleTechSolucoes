@@ -20,7 +20,7 @@
     height: 80%;
 }
 
-.footer-end{
+.footer-end, .footer-end a{
     color: #fff;
     background-color: #0f0f0f;
     font-size: 80%;

@@ -1,7 +1,7 @@
 import React from 'react'
-import './Home.css'
-import Main from '../Main'
-import News from '../News'
+import '../styles/Home.css'
+import Main from '../components/Main'
+import News from '../components/News'
 
 function Home(){
     return (
