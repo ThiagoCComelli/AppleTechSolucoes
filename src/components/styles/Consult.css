@@ -8,3 +8,58 @@
     flex-direction: column;
     
 }
+
+.consultMainFilter{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.consultFilter{
+    width: 65%;
+    min-height: 100px;
+    box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.75);
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.consultContainerFilter{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    left: 0;
+}
+
+.consultFilter input{
+    color: rgba(0, 0, 0, 0.562);
+    width: 100%;
+    height: 30px;
+    border-style: none;
+    border-bottom: 1px black solid;
+}
+
+.consultFilter button {
+    margin-top: 10px;
+    border-style: none;
+    height: 30px;
+    width: 100%;
+    background-color: #fff;
+    border: black solid 1px;
+    cursor: pointer;
+    transition: background-color linear 0.3s, color linear 0.3s;
+}
+
+.consultFilter button:hover{
+    background-color: #378194;
+    color: white;
+}
+
+.consultContainerFilter select{
+    margin-left: 10px;
+    border: 1px solid black;
+    background-color: white;
+}

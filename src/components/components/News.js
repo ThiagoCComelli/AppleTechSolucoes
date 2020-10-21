@@ -35,7 +35,7 @@ function News() {
                 <NewsItem image={`${process.env.PUBLIC_URL}/images/image3.jpeg`} title='Preço' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac tortor nunc. Nullam et turpis at dui porta ultrices quis id risus. In posuere interdum commodo. Etiam auctor turpis eget lectus tristique volutpat. Donec tincidunt nisi tempor dolor tincidunt porttitor. Donec vitae sapien velit. Nunc imperdiet tristique urna quis convallis.'/>
             </Link>
             <Link to="/contact">
-                <NewsItem image={`${process.env.PUBLIC_URL}/images/image6-min.jpg`} title='Contato' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac tortor nunc. Nullam et turpis at dui porta ultrices quis id risus. In posuere interdum commodo. Etiam auctor turpis eget lectus tristique volutpat. Donec tincidunt nisi tempor dolor tincidunt porttitor. Donec vitae sapien velit. Nunc imperdiet tristique urna quis convallis.'/>
+                <NewsItem image={`${process.env.PUBLIC_URL}/images/image6.jpg`} title='Contato' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac tortor nunc. Nullam et turpis at dui porta ultrices quis id risus. In posuere interdum commodo. Etiam auctor turpis eget lectus tristique volutpat. Donec tincidunt nisi tempor dolor tincidunt porttitor. Donec vitae sapien velit. Nunc imperdiet tristique urna quis convallis.'/>
             </Link>
         </div>
         </>

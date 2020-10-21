@@ -32,9 +32,9 @@ export default function Price(){
                 <h4>Preco de serviços</h4>
             </div>
             <div className="priceContents">
-                <PriceItem price='R$15' image={`${process.env.PUBLIC_URL}/images/image3.jpeg`} title='Bronze' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'/>
-                <PriceItem price='R$25' image={`${process.env.PUBLIC_URL}/images/image3.jpeg`} title='Prata' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'/>
-                <PriceItem price='R$40' image={`${process.env.PUBLIC_URL}/images/image3.jpeg`} title='Ouro' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'/>
+                <PriceItem price='R$15' image={`${process.env.PUBLIC_URL}/images/image4-min.jpg`} title='Bronze' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'/>
+                <PriceItem price='R$25' image={`${process.env.PUBLIC_URL}/images/image5-mim.png`} title='Prata' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'/>
+                <PriceItem price='R$40' image={`${process.env.PUBLIC_URL}/images/image5-mim2.png`} title='Ouro' text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'/>
             </div>
         </div>
         </>

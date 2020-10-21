@@ -39,6 +39,7 @@ function Navbar(){
                     <div><Link to='/' onClick={() => {
                         setMenuNav({open:!menuNav.open})
                         logout()}}>Sair</Link></div>}
+                {userData.user.userType === "admin" ? <div><Link to="/call-page-admins" onClick={() => setMenuNav({open:!menuNav.open})}>Chamados</Link></div> : null}
             </div>
             </>
         )
@@ -52,6 +53,7 @@ function Navbar(){
             </Link>
             <button className="collapse" onClick={() => {setMenuNav({open:!menuNav.open})}}>{menuNav.open ? "Fechar Menu" : "Menu"}</button>
             <ul className="navlinks">
+                { userData.user.userType === "admin" ? <li><Link to="/call-page-admins">Chamados</Link></li> : null}
                 <li><Link to="/services">Serviços</Link></li>
                 { userData.user ? <li><Link to="/profile">Perfil</Link></li> : null}
                 { !userData.user ? <li><Link to="/login">Entrar</Link></li>   : <li onClick={logout}><Link to='/'>Sair</Link></li>}

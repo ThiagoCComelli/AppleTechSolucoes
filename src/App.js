@@ -14,6 +14,7 @@ import Login from './components/pages/Login'
 import Register from './components/pages/Register'
 import Profile from './components/pages/Profile'
 import CallPage from './components/pages/CallPage'
+import CallPageAdmins from './components/pages/CallPageAdmin'
 import Contact from './components/pages/Contact'
 import Price from './components/pages/Price'
 import PrivateRoute from './components/pages/PrivateRoute'
@@ -56,7 +57,11 @@ function App() {
 
     
 
-    if(userData.user === undefined) return <div className="loadingDiv"><h1>Loading...</h1></div>
+    if(userData.user === undefined){
+        return <div className="loadingDiv"><h1>Loading...</h1></div>
+    } else{
+
+    }
 
     return (
         <>
@@ -76,6 +81,7 @@ function App() {
                     <Route path="/register" exact component={Register} />
                     <PrivateRoute path="/profile" exact component={Profile} />
                     <PrivateRoute path="/call" exact component={CallPage} />
+                    <PrivateRoute path="/call-page-admins" exact component={CallPageAdmins} />
                 </Switch>
                 <Footer />
             </ScrollToTop>

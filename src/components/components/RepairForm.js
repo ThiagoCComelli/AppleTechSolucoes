@@ -27,7 +27,7 @@ export default function RepairForm(){
         const res = await saveCallService(infos)
 
         if(res.data){
-            notification({title:"Chamada registrada com sucesso!.",message:"Sua chamada foi registrada e sera analisada em breve.",type:"success"})
+            notification({title:"Chamada registrada com sucesso!",message:"Sua chamada foi registrada e sera analisada em breve.",type:"success"})
             history.push('/')
         }else{
             notification({title:"Falha na hora de registrar!",message:"Houve um problema na hora de tentar registrar sua chamada, tente novamente mais tarde.",type:"danger"})
@@ -51,7 +51,7 @@ export default function RepairForm(){
                 </div>
                 <div className="boxFormRepair">
                     <label>Email:</label>
-                    <input type="email" value={infos.email} onChange={(e) => changeInfos({...infos,email:e.target.value})} placeholder="thiago.comelli@outlook.com" required></input>
+                    <input type="email" value={infos.email} onChange={(e) => changeInfos({...infos,email:e.target.value})} placeholder="thiago.comelli@outlook.com" readOnly required></input>
                 </div>
                 <div className="boxFormRepairDuplo">
                     <div className="boxFormRepairDuploItem">

@@ -45,4 +45,20 @@ const deleteCall = async (call) => {
     return result
 }
 
-export {login,register,check,checkUser,deleteUser,changeDataProfile,saveCallService,getCallService,deleteCall}
+const changeCallState = async (changes) => {
+    const result = await axios.post('https://reactjsthiagoapi.herokuapp.com/changeCallState', changes)
+    return result
+}
+
+const getAllCalls = async () => {
+    const result = await axios.get('https://reactjsthiagoapi.herokuapp.com/getAllCalls')
+    return result
+}
+
+const getFilterCall = async (filter) => {
+    const result = await axios.post('https://reactjsthiagoapi.herokuapp.com/getFilterCall', filter)
+    return result
+}
+
+
+export {login,register,check,checkUser,deleteUser,changeDataProfile,saveCallService,getCallService,deleteCall,changeCallState,getAllCalls,getFilterCall}

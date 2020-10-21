@@ -11,7 +11,7 @@ function ServicesItem(){
         <div className="contents">
             <div className="container container-first">
                 <Link to="/services/repair">
-                    <img src={`${process.env.PUBLIC_URL}/images/image5-mim.png`} alt="Servicos"/>
+                    <img src={`${process.env.PUBLIC_URL}/images/image5.jpg`} alt="Servicos"/>
                     <div className="container-text">
                         <h2>CONCERTO</h2>
                     </div>
@@ -19,7 +19,7 @@ function ServicesItem(){
             </div>
             <div className="container container-second">
                 <Link to="/services/consult">
-                    <img src={`${process.env.PUBLIC_URL}/images/image5-mim2.png`} alt="Servicos"/>
+                    <img src={`${process.env.PUBLIC_URL}/images/image6.jpg`} alt="Servicos"/>
                     <div className="container-text">
                         <h2>CONSULTA</h2>
                     </div>
