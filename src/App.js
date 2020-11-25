@@ -25,7 +25,6 @@ import UserContext from './context/UserContext'
 
 import './App.css'
 
-
 function App() {
     const [userData, setUserData] = useState({
         token: undefined,
