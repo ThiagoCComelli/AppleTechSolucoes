@@ -24,7 +24,7 @@ export default function Contact(){
                     </header>
                     <div className="contactText">
                         <strong>Carvoeira, Florianópolis, 88040-370</strong>
-                        <span>(12) 3456-7890</span>
+                        <span>(48) 9 9603-0226</span>
                     </div>
                     <footer>
                         <strong>Florianopolis</strong>

@@ -13,88 +13,127 @@
     justify-content: center;
 }
 
-.priceAward{
-    position: absolute;
-    z-index: 10;
-    right: 25px;
-    top: -4px;
-    width: 50px;
-}
-
-.cardPriceDiv{
-    position: absolute;
-    color: #fff;
-    background-color: #E42328;
-    width: 75px;
-    height: 20px;
-    transform: translate(5px,-25px);
-    display: flex;
-    justify-content: center;
-}
-
 .cardPrice{
     position: relative;
-    min-width: 300px;
-    max-width: 400px;
-    min-height: 400px;
+    width: 300px;
+    height: 300px;
     margin: 30px;
     cursor: pointer;
     transition: scale linear .5s, box-shadow linear .5s;
-    border-radius: 25px;
+    overflow: hidden;
+    border: solid 1px black;
+    background-color: black;
 }
 
-.BronzePrice{
-    background-color: #F4E4D4;
+.cardPriceDesc{
+    position: absolute;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 60px 30px 30px 30px;
+    text-align: justify;
 }
 
-.PrataPrice{
-    background-color: #D3D3D3;
+.cardPriceDesc h2{
+    text-transform: uppercase;
 }
 
-.OuroPrice{
-    background-color: #FAFAD2;
+.cardPriceMain{
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+
+.active{
+    transform: translateY(-250px);
 }
 
 .card-imagePrice{
-    overflow: hidden;
-    height: 250px;
-    border-radius: 25px 25px 0 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.card-imagePrice img {
-    display: block;
+.card-imagePrice{
+    position: absolute;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.card-imagePrice::before{
+    background: linear-gradient(to top, black, transparent);
+}
+
+.card-imagePrice::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.267);
+}
+
+#idBronze::before{
+    content: "Bronze";
+}
+
+#idPrata::before{
+    content: "Prata";
+}
+
+#idOuro::before{
+    content: "Ouro";
+}
+
+.card-imagePrice::after{
+    content: "R$25";
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    font-size: 2.5rem;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.267);
+
+}
+
+#idBronze::after{
+    content: "R$15";
+}
+
+#idPrata::after{
+    content: "R$25";
+}
+
+#idOuro::after{
+    content: "R$40";
+}
+
+.card-imagePrice img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: scale ease-in-out .5s;
 }
 
-.card-titlePrice{
-    width: 50%;
-    height: 50px;
-    background-color:#fff;
-    border-radius: 50px;
-    transform: translate(50%, -50%);
+.cardPriceTitle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    top: 0;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
-.card-descPrice{
-    position: relative;
-    padding: 0 30px 20px 30px;
-    word-break: keep-all;
-    text-align: justify;
-    transform: translate(0, -20px);
-}
-
-.cardPrice:hover{
-    scale: 1.05;
-    box-shadow: 10px 10px 27px -22px rgba(0,0,0,0.75);
-}
-
-.cardPrice:not(:hover){
-    scale: 1;
-    box-shadow: none;
-}
